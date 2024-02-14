@@ -1,16 +1,19 @@
-# galers
+# Galers
 
-A new Flutter project.
+An IoT-based mobile savings monitoring application uses ESP32, multicoin acceptor, and TCS34725 to identify coin and paper currency types and can be monitored via Android & iOS using Flutter.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+First, install ESP32 from Arduino IDE
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+  https://www.arduino.cc/en/software/
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Second, on the Arduino IDE. In File > Preferences, enter the code below in the Additional Boards Manager URLs in Preferences:
+
+```bash
+    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+```
+    
