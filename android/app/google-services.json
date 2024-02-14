@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1084907029755",
+    "project_id": "savings-app-74ffb",
+    "storage_bucket": "savings-app-74ffb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084907029755:android:91bf09e423d11e7a0a1c5e",
+        "android_client_info": {
+          "package_name": "com.example.galers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Jf22Eeh2n3tCED-OcQM3aSmOuXtiMn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
