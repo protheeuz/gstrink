@@ -12,6 +12,8 @@ class ListTileBldr extends StatelessWidget {
   final String title;
   final IconData icon;
 
+    // onPressed: () => btnFunc()
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,6 +21,7 @@ class ListTileBldr extends StatelessWidget {
           borderRadius: kBorderRadius / 2,
           color: secondaryColor.withOpacity(0.125)),
       child: ListTile(
+        
         leading: Icon(
           icon,
           color: primaryColor,
@@ -33,6 +36,7 @@ class ListTileBldr extends StatelessWidget {
           color: Colors.grey,
           size: 30,
         ),
+    
       ),
     );
   }

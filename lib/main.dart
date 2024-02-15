@@ -14,12 +14,17 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  
+
+
 
   @override
   Widget build(BuildContext context) {
+
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Mathtech-Fachri',
+      title: 'TabunganKu',
       theme: ThemeData(
         primaryColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
@@ -29,7 +34,8 @@ class MyApp extends StatelessWidget {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return const HomePage(title: 'TabunganKu');
+              String currentUserUid = FirebaseAuth.instance.currentUser!.uid;
+              return  HomePage(title: 'TabunganKu', currentUserUid: currentUserUid);
             } else {
               return const LoginPage();
             }

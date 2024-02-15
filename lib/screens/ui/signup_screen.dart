@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:galers/controllers/auth_services.dart';
 import 'package:galers/screens/ui/login_screen.dart';
 import 'package:get/get.dart';
@@ -217,13 +216,15 @@ class _SignUpState extends State<SignUp> {
     });
 
     if (user != null) {
-      Fluttertoast.showToast(msg: 'Akun berhasil dibuat, silakan login.');
+      Get.snackbar('Berhasil', 'Akun berhasil dibuat, silakan login.');
+      // Fluttertoast.showToast(msg: 'Akun berhasil dibuat, silakan login.');
       Get.to(
         () => const LoginPage(
         ),
       );
     } else {
-      Fluttertoast.showToast(msg: 'Terjadi error saat membuat akun');
+      Get.snackbar('Terjadi kesalahan', 'Terjadi kesalahan saat membuat akun');
+      // Fluttertoast.showToast(msg: 'Terjadi error saat membuat akun');
     }
   }
 }

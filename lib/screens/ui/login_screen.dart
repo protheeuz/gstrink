@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:galers/controllers/auth_services.dart';
 import 'package:galers/screens/ui/signup_screen.dart';
 import 'package:get/get.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 import 'home_page.dart';
 
@@ -234,14 +233,18 @@ class _LoginPageState extends State<LoginPage> {
     });
 
     if (user != null) {
-      Fluttertoast.showToast(msg: 'Akun berhasil login');
+      Get.snackbar('Berhasil login', 'Selamat datang!');
+      // Get.snackbar('Akun berhasil login');
+      // Fluttertoast.showToast(msg: 'Akun berhasil login');
       Get.to(
         () => HomePage(
-          title: 'Halo, $email',
+          currentUserUid: user.uid,
+          title: 'Hi, $email',
         ),
       );
     } else {
-      Fluttertoast.showToast(msg: 'Terjadi error saat login');
+      Get.snackbar('Login gagal', 'Harap periksa email/password Anda.');
+      // Fluttertoast.showToast(msg: 'Terjadi error saat login');
     }
   }
 }
