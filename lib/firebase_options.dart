@@ -51,12 +51,4 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA7Jf22Eeh2n3tCED-OcQM3aSmOuXtiMn8',
-    appId: '1:1084907029755:android:91bf09e423d11e7a0a1c5e',
-    messagingSenderId: '1084907029755',
-    projectId: 'savings-app-74ffb',
-    storageBucket: 'savings-app-74ffb.appspot.com',
-  );
 }
